@@ -1,0 +1,65 @@
+body {
+	background: #3F72FE;	
+	font-family: monospace;
+	color: #fff;
+	transition: background .5s;
+}
+
+.total, .time {
+	color: #fff;
+	position: absolute;
+	left: 25px;
+	font-size: 18px;
+	letter-spacing .1em
+	transition: all 1s;
+}
+
+.time {
+	top: 50px;
+}
+
+.click-circle {
+	background: rgba(255,255,255,1);
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	transition: box-shadow .3s ease;
+	position: absolute;
+}
+
+.click-circle:hover {
+	box-shadow: rgba(255,255,255, 0.2) 0px 0px 0px 20px;
+}
+
+.click-animation {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background: #fff;
+	margin: -25px;
+	border-radius: 25px;
+	opacity: 1;
+	transform: scale(0);
+	z-index: 9999;
+}
+
+.click-animation.active {
+	transition: transform 600ms ease, opacity 600ms ease;
+	opacity: 0;
+	transform: scale(1);
+}
+
+.stats {
+	position: absolute;
+	bottom: 10px;
+	display: none;
+	list-style: none;
+}
+
+.stats li:first-child {
+	position: absolute;
+	top: -25px;
+	left: 5px;
+	width: 150px;
+	font-size: 20px;
+}
