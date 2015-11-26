@@ -12,7 +12,7 @@
 		<ul class="stats">
 			<li>Top Scores</li>
 			<?php
-			$conn = new PDO('mysql:host=localhost;dbname=avej', 'root', 'Jhajhajha1!?1', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			$conn = new PDO('mysql:host=localhost;dbname=', '', '', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 			$count = 1;
 			foreach($conn->query("SELECT * FROM `clck_logs` ORDER BY `clicks` DESC LIMIT 5")->fetchAll() as $stat) {
 				echo '<li>' . $count++ . '. ' . $stat['clicks'] . '</li>';
