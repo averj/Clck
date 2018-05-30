@@ -3,7 +3,7 @@ error_reporting(-1);
 ini_set('display_errors', 1);
 if(isset($_GET['amt'])) {
 	try {
-		$conn = new PDO('mysql:host=localhost;dbname=avej', 'root', 'Jhajhajha1!?1', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+		$conn = new PDO('mysql:host=localhost;dbname=avej', 'root', '', array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	}catch(PDOException $e) {
 		echo $e->getMessage();
 	}
